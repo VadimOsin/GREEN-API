@@ -1,0 +1,11 @@
+.login {
+    width: 50%;
+    margin: 6rem auto;
+    border-radius: 1rem;
+    padding: 8rem;
+    background: white;
+}
+
+.login__btn__submit {
+    text-align: end;
+}
