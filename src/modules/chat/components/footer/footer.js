@@ -6,27 +6,30 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import {sendMessage} from "../../../chatWindows/axios/message";
 import {UserContext} from "../../../auth/components/contex/userContex";
 
-const Footer = () => {
-    const [message, setMessage] = useState()
+const Footer = ({setAddNewMessage, addNewMessage}) => {
+    const [message, setMessage] = useState('')
     const user = useContext(UserContext)
     const sendNewMessage = async () => {
         let body = {
             "chatId": "7123456789@c.us",
-            "message": `${message}}`
+            "message": `${message}`
         }
         try {
             await sendMessage(user, body).then(() => {
                 alert("Сообщение отправлено!")
-                setMessage('')
+                setMessage("")
+                let mes = {
+                    type: "me",
+                    message: `${message}`
+                }
+                setAddNewMessage([...addNewMessage, mes]);
             })
-
-
         } catch (error) {
             console.error(error);
         }
     }
     return (
-        <InputGroup className="">
+        <InputGroup className="footer">
             <Form.Control
                 placeholder="Введите сообщение"
                 aria-label="Recipient's username"

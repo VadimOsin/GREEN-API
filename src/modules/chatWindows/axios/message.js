@@ -1,9 +1,7 @@
 import {instance} from "./host";
 
 export const receiveNotification = async (user) => {
-    const {data} = await instance.get(`waInstance${user.idInstance}/receiveNotification/${user.apiTokenInstance}`).then(
-       // res => deleteNotification(user, res.data.receiptId)
-    ).catch(
+    const {data} = await instance.get(`waInstance${user.idInstance}/receiveNotification/${user.apiTokenInstance}`).catch(
         error => {
             throw new Error(error.response.data.message);
         }
@@ -12,7 +10,7 @@ export const receiveNotification = async (user) => {
 };
 
 export const deleteNotification = async (user, id) => {
-    const {data} = await instance.get(`waInstance${user.idInstance}/deleteNotification/${user.apiTokenInstance}/${id}`)
+    const {data} = await instance.delete(`waInstance${user.idInstance}/deleteNotification/${user.apiTokenInstance}/${id}`)
         .catch(
             error => {
                 throw new Error(error.response.data.message);
@@ -22,7 +20,7 @@ export const deleteNotification = async (user, id) => {
 };
 
 export const sendMessage = async (user, body) => {
-    const {data} = await instance.post(`waInstance${user.idInstance}/sendMessage/${user.apiTokenInstance}/`,body)
+    const {data} = await instance.post(`waInstance${user.idInstance}/sendMessage/${user.apiTokenInstance}/`, body)
         .catch(
             error => {
                 throw new Error(error.response.data.message);

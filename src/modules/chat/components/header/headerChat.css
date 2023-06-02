@@ -1,3 +1,5 @@
 .headerChat{
+    position: fixed;
+    width: 63.5%;
     margin-left: 2px;
 }

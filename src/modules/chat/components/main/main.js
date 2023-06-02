@@ -1,21 +1,12 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './main.css'
 import Message from "../message/message";
 
-const Main = () => {
-    const [message, setMessage] = useState([
-        { type: 'me', message: "fgvsg" },
-        { type: 'you', message: "fgvsg" },
-        { type: 'me', message: "fgvsg" },
-        { type: 'me', message: "fgvsg" },
-        { type: 'me', message: "fgvsg" },
-        { type: 'you', message: "fgvsg" },
-        { type: 'me', message: "fgvsg" }
-    ]);
+const Main = ({message}) => {
     return (
         <div className="main">
             {
-                message.map((i, index) => (
+                message.reverse().map((i, index) => (
                     <Message key={index} type={i.type} message={i.message} />
                 ))
             }
