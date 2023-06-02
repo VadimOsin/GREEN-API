@@ -15,8 +15,11 @@ const Footer = () => {
             "message": `${message}}`
         }
         try {
-            const idMessage = await sendMessage(user,body);
-            console.log(idMessage)
+            await sendMessage(user, body).then(() => {
+                alert("Сообщение отправлено!")
+                setMessage('')
+            })
+
 
         } catch (error) {
             console.error(error);
