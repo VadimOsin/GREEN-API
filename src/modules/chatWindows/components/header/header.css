@@ -1,0 +1,16 @@
+.header {
+    height: 3rem;
+    background-color: #f0f2f5;
+}
+
+.header__list__svg {
+    color: gray;
+}
+
+.header__svg {
+    margin-left: 1rem;
+}
+.header__svg:hover{
+    transition: 0.3s;
+    color: black;
+}

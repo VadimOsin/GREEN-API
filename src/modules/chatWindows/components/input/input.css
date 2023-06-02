@@ -1,0 +1,20 @@
+.inputForm {
+    width: 100%;
+    margin: 5px 0 0 5px;
+}
+
+.inputForm__input {
+    background-color: #f0f2f5;
+    border-radius: 5px;
+
+}
+
+.inputForm__filter {
+    margin: 5px 2px 0 9px;
+    color: gray;
+}
+
+.inputForm__filter:hover {
+    transition: 0.3s;
+    color: black;
+}

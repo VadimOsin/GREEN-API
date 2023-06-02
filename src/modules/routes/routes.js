@@ -1,8 +1,8 @@
-import listChat from "../chat/listChat";
+import listChat from "../chatWindows/listChat";
 import login from "../auth/components/login/login";
 
 export const LOGIN_ROUTE = '/'
-export const LIST_CHAT_ROUTE = '/list-chat'
+export const LIST_CHAT_ROUTE = '/list-chatWindows'
 
 export const routes = [
     {

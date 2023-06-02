@@ -19,7 +19,7 @@ const Login = () => {
     const onClickLogin = () => {
         if (login.idInstance && login.apiTokenInstance) {
             signIn(login.idInstance, login.apiTokenInstance)
-            navigate('/list-chat')
+            navigate('/list-chatWindows')
         } else {
             alert("Заполните поля!")
         }
