@@ -2,7 +2,7 @@
     margin: 0.5rem;
     max-width: 45%;
     width: fit-content;
-    padding: 5px 10px;
+    padding: 1rem;
     border-radius: 10px;
     color: black;
 }
@@ -15,10 +15,10 @@
     background: white;
 }
 
-.you__message{
-   text-align: -webkit-left;
+.you__message {
+    text-align: -webkit-left;
 }
 
-.me__message{
+.me__message {
     text-align: -webkit-right;
 }

@@ -20,7 +20,7 @@ const Chat = () => {
                                 message: res?.body?.messageData?.textMessageData?.textMessage
                             }]);
                         }
-                        deleteNotification(user, res?.receiptId).then(r => console.log(r))
+                        deleteNotification(user, res?.receiptId).then()
                     }
                 }
             )

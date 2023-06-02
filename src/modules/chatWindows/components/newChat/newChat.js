@@ -4,17 +4,17 @@ import Input from "../input/input";
 import {sendMessage} from "../../axios/message";
 import {UserContext} from "../../../auth/components/contex/userContex";
 
-const NewChat = ({setNewChatModal}) => {
+const NewChat = ({setNewChatModal, setListChatInfo, listChatInfo}) => {
     const [number, setNumber] = useState('')
     const user = useContext(UserContext)
     const onClickBtnSend = async () => {
+        setListChatInfo([...listChatInfo, number])
         let obj = {
-            "chatId": "7123456789@c.us",
+            "chatId": `${number}@c.us`,
             "message": "."
         }
         try {
-            const newMessage = await sendMessage(user,obj);
-            console.log(newMessage)
+            await sendMessage(user, obj);
 
         } catch (error) {
             console.error(error);

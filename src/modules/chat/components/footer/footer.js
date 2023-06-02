@@ -16,7 +16,6 @@ const Footer = ({setAddNewMessage, addNewMessage}) => {
         }
         try {
             await sendMessage(user, body).then(() => {
-                alert("Сообщение отправлено!")
                 setMessage("")
                 let mes = {
                     type: "me",
